@@ -1,25 +1,46 @@
-# Git AI Voice Project 🤖🎙️
+# 📌 AI Voice Expense Tracker with Speech-to-Text
 
-हा एक पायथन-आधारित व्हॉइस असिस्टंट प्रोजेक्ट आहे, जो गुगल क्लाउड API (GCP) चा वापर करून काम करतो. हा प्रोजेक्ट युझरच्या आवाजाला ओळखून त्याला उत्तर देतो.
+An intelligent **Python-based Voice Expense Tracker** that allows users to manage their daily expenses using voice commands. It converts spoken words into text and automatically extracts and logs financial data (Amount, Category, Description). Developed as an interview portfolio project.
 
-## वैशिष्ट्ये (Features)
-- **Voice Recognition:** युझरचा आवाज ऐकून तो टेक्स्टमध्ये बदलतो.
-- **AI Processing:** गुगलच्या शक्तिशाली API द्वारे योग्य उत्तरे शोधतो.
-- **Text-to-Speech:** दिलेले उत्तर पुन्हा आवाजाच्या स्वरूपात ऐकवतो.
+## 🛠️ Tech Stack & Tools
+- **Language:** Python 3.x
+- **Speech Recognition:** `SpeechRecognition` library (Google Speech-to-Text API)
+- **Audio Processing:** `PyAudio` (for microphone input)
+- **Database/Storage:** `CSV` / `SQLite` (to store expense records)
 
-## आवश्यक सॉफ्टवेअर (Requirements)
-प्रोजेक्ट रन करण्यासाठी तुमच्या काँप्युटरवर खालील गोष्टी इन्स्टॉल असणे आवश्यक आहे:
-- Python 3.x
-- python-dotenv
+## 🔄 How It Works (Project Workflow)
+1. **Voice Input:** The system listens to the user's voice command through the microphone (e.g., *"Spent 50 rupees on coffee"*).
+2. **Speech-to-Text Conversion:** The `SpeechRecognition` library converts the recorded audio into text.
+3. **Data Extraction:** The Python script parses the text to find the **Amount** (50), **Category** (Food/Coffee), and **Date**.
+4. **Data Logging:** The extracted information is automatically saved into an Excel/CSV file or database for tracking.
 
-## प्रोजेक्ट कसा रन करावा? (How to Run)
+## 💡 Key Features
+- **Hands-Free Logging:** Add expenses instantly just by speaking.
+- **Real-Time Processing:** Quick conversion from speech to organized text.
+- **Automated Categorization:** Smartly identifies numbers as amounts and words as expense categories.
 
-१. हा प्रोजेक्ट डाऊनलोड किंवा क्लोन करा.
-२. मुख्य फोल्डरमध्ये एक `.env` फाईल तयार करा आणि तुमची API की जोडा:
-`MY_API_KEY=तुमची_की_इथे_टाका`
+## 🚀 How to Run the Project
 
-३. आवश्यक लायब्ररी इन्स्टॉल करा:
-`pip install python-dotenv`
+Follow these steps to run the project on your local machine:
 
-४. प्रोजेक्ट रन करा:
-`python newgitaiboice.py`
+### 1. Clone the Repository
+```bash
+git clone [[https://github.com/ashishgaikwad80-collab/ai-voice-expense-tracker]
+cd [ashishgaikwad80_collab]
+```
+
+### 2. Install Dependencies
+Make sure you install the required Python packages before running the application:
+```bash
+pip install SpeechRecognition pyaudio
+```
+*(Note: If you face issues installing pyaudio on Windows, use `pip install pipwin` followed by `pipwin install pyaudio`)*
+
+### 3. Run the Application
+Execute your main Python file:
+```bash
+python [newgitaivoice].py
+```
+
+## 📄 License
+This project is licensed under the **MIT License** - see the `LICENSE` file for details.
